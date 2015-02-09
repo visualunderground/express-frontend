@@ -1,0 +1,42 @@
+nav {
+    overflow: auto;
+    width: 100%;
+    margin: 30px 0;
+    padding: 0 25px;
+
+    button {
+        margin: 0;
+    }
+
+    .button {
+        float: right;
+        width: 200px;
+    }
+
+    .button--muted {
+        float: left;
+        width: 125px;
+    }
+}
+
+@include respond-to(handhelds) {
+    nav {
+        position: relative;
+        padding: 0 10px;
+
+        .button {
+            float: none;
+            width: 100%;
+            display: block;
+        }
+
+        .button--muted {
+            position: absolute;
+            top: 80px;
+
+            + button {
+                margin-bottom: 80px;
+            }
+        }
+    }
+}

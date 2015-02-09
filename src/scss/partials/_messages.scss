@@ -1,0 +1,110 @@
+%pointer {
+    content: '';
+    height: 0;
+    width: 0;
+    left: 50%;
+    position: absolute;
+    margin-left: -8px;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+}
+
+@mixin message-point($direction) {
+    @extend %pointer;
+    @if $direction == 'up' {
+        border-bottom-color: inherit;
+        border-bottom-style: solid;
+        border-bottom-width: 16px;
+        top: -10px;
+    } @else if $direction == 'down' {
+        border-top-color: inherit;
+        border-top-style: solid;
+        border-top-width: 16px;
+        bottom: -10px;
+    }
+}
+
+@mixin message($radius: 2px) {
+    position: relative;
+    border-radius: $radius;
+
+    p {
+        padding: 10px 20px;
+        margin: 0;
+    }
+
+    h3 {
+        margin: 10px 20px 15px;
+        font-size: 29px;
+    }
+
+    @include respond-to(handhelds) {
+        border-left: 0 none !important;
+        border-radius: 0 !important;
+        border-right: 0 none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+}
+
+div[class^='message'] {
+    margin: 0 25px;
+}
+
+.message--master {
+    @include message(6px);
+
+    border: 1px solid $athens-gray;
+    padding: 10px 0;
+}
+
+.message--error {
+    @include message;
+
+    background-color: $error-background-colour;
+    border-color: $error-background-colour;
+    color: $white;
+    font-weight: bold;
+
+    &-up {
+        @extend .message--error;
+        
+        &:before {
+            @include message-point('up');
+        }
+    }
+
+    &-down {
+        @extend .message--error;
+        
+        &:after {
+            @include message-point('down');
+        }
+    }
+}
+
+.message--info {
+    @include message;
+
+    background-color: $info-colour;
+    border-color: $info-colour;
+    color: $white;
+    font-weight: bold;
+
+    &-up {
+        @extend .message--info;
+         
+        &:before {
+            @include message-point('up');
+        }
+    }
+
+    &-down {
+        @extend .message--info;
+        
+        &:after {
+            @include message-point('down');
+        }
+    }
+}

@@ -1,0 +1,70 @@
+.form__title {
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    line-height: 1.4;
+    font-weight: 300;
+    margin: 1em 0;
+    width: 100%;
+
+    @include respond-to(handhelds) { 
+        background-color: $header-colour;
+        color: $header-text-colour;
+        margin-bottom: .5em;
+        padding: .5em 10px;
+    }
+
+}
+
+.textual-value {
+    //  Inline value
+    padding: 5px 0;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+// Radios and checkboxes
+.touch-control {
+    color: $text-colour;
+    display: block;
+    min-width: 105px;
+    line-height: 1;
+    float: left;
+    position: relative;
+    margin-right: 15px;
+    cursor: pointer;
+
+    @include respond-to(handhelds) { 
+        width: 48%;
+        margin-right: 0;
+
+        &:first-child {
+            margin-right: 4%;
+        }
+    }
+
+    > input {
+        margin: 10px 0 0 10px;
+        position: absolute;
+    }
+
+    span {
+        background-color: $muted-colour;
+        border: 1px solid darken($muted-colour, 15%);
+        border-radius: 2px;
+
+        padding: 9px 30px 10px;
+        float: right;
+        min-width: 80px;
+        width: 100%;
+    }
+
+    input:checked + span {  // IE 9+ :-?
+        background-color: $selected-colour;
+        border-color: darken($selected-colour, 15%);
+        color: $white;
+
+        .form__hint {
+            color: inherit;
+        }
+    }
+}

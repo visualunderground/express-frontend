@@ -37,10 +37,18 @@ module.exports = function(grunt) {
                     dest: 'app/public/images/' // Destination path prefix
                 }]
             }
+        },
+
+        copy: {
+            bower_dependencies: {
+                src: 'bower_components/meyer-reset/stylesheets/_meyer-reset.scss',
+                dest: 'src/scss/vendor/_meyer-reset.scss'
+            }
         }
 
     });
 
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-scss-lint');

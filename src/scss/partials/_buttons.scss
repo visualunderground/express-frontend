@@ -1,0 +1,65 @@
+@mixin button-colour($colour) {
+    background: $colour;
+
+    // border-width: 1px;
+    // border-style: solid;
+    // border-radius: 2px;
+    // border-color: darken($colour, 15%);
+    
+    @if lightness($colour) > 75% {
+        color: $text-colour;
+    }@else {
+        color: $white;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        background: darken($colour, 5%);
+    }
+}
+
+%button {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1;
+    margin-right: 15px;
+    min-height: 39px;
+    // =  line-height + border + padding
+    border: 0;
+    padding: 5px;
+    
+    cursor: pointer;
+    min-width: 125px;
+
+    &:active {
+        position: relative;
+        top: 1px;
+    }
+
+    @include respond-to(handhelds) {
+        width: 100%;
+    }
+}
+
+.button {
+    @extend %button;
+    @include button-colour($primary-colour);
+}
+
+.button--secondary {
+    @extend %button;
+    @include button-colour($secondary-colour);
+}
+
+.button--tertiary {
+    @extend %button;
+    @include button-colour($selected-colour);
+    
+}
+
+.button--muted {
+    @extend %button;
+    @include button-colour($muted-colour);
+}
+
