@@ -1,0 +1,5 @@
+{
+  "verbose": true,
+  "ignore": ["bower_components/*", "node_modules/*"],
+  "ext": ["hbs", "js", "json", "html"]
+}
