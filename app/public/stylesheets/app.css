@@ -328,7 +328,7 @@ li[class^='message'] + .form__group, li[class^='message'] + .form__group--error,
   min-width: 225px;
   max-width: 225px;
   padding-top: 6px;
-  background-image: url('/assets/images/drop.png');
+  background-image: url('../images/drop.png');
   background-repeat: no-repeat;
   background-position: right center;
   padding-right: 30px;
@@ -341,7 +341,7 @@ li[class^='message'] + .form__group, li[class^='message'] + .form__group--error,
   max-width: 225px;
   min-width: 0;
   padding-top: 6px;
-  background-image: url('/assets/images/drop.png');
+  background-image: url('../images/drop.png');
   background-repeat: no-repeat;
   background-position: right center;
   padding-right: 30px;
@@ -810,7 +810,7 @@ nav {
       opacity: 1;
       transform: translate3d(0, -5px, 0); }
   .block-link__image {
-    background-image: url('/assets/images/kitten-1.jpg');
+    background-image: url('../images/kitten-1.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1122,7 +1122,7 @@ nav {
       margin-top: -4px;
       height: 8px;
       width: 11px;
-      background-image: url('/assets/images/drop-both.png');
+      background-image: url('../images/drop-both.png');
       background-repeat: no-repeat;
       background-position: bottom center;
       transition: transform 0.3s ease-in-out; }
