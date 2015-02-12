@@ -40,6 +40,14 @@ module.exports = function(grunt) {
             dist: {
                 src: 'app/public/javascripts/application.js',
                 dest: 'app/public/javascripts/application.min.js'
+            },
+            vendor: {
+                options: {
+                    preserveComments : true
+                },
+                files: {
+                   'src/javascripts/vendor/loadJS.min.js': ['src/javascripts/vendor/loadJS.js']
+                }
             }
         },
 
@@ -129,11 +137,21 @@ module.exports = function(grunt) {
         },
 
         copy: {
-            bower_dependencies: {
-                src: 'bower_components/meyer-reset/stylesheets/_meyer-reset.scss',
-                dest: 'src/scss/vendor/_meyer-reset.scss'
+            vendor: {
+                files: [
+                    {
+                        src: 'bower_components/meyer-reset/stylesheets/_meyer-reset.scss',
+                        dest: 'src/scss/vendor/_meyer-reset.scss'
+                    },
+                    {
+                        src: 'bower_components/loadJS/loadJS.js',
+                        dest: 'src/javascripts/vendor/loadJS.js'
+                    }
+                ]
+                
             }
         }
+
 
     });
     
@@ -147,14 +165,17 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-scss-lint');
     grunt.loadNpmTasks('grunt-notify');
     
+    // Setup vendor assets
+    grunt.registerTask('get:vendor',    ['copy:vendor', 'uglify:vendor']);
+
     // Build assets from src
-    grunt.registerTask('build:css',                 ['scsslint:dist', 'sass:dist']);
-    grunt.registerTask('build:img',                 ['imagemin:dist']);
-    grunt.registerTask('build:js',                  ['jshint:all', 'modernizr', 'concat:dist', 'uglify:dist']);
+    grunt.registerTask('build:css',     ['scsslint:dist', 'sass:dist']);
+    grunt.registerTask('build:js',      ['jshint:all', 'modernizr', 'concat:dist', 'uglify:dist']);
+    grunt.registerTask('build:img',     ['imagemin:dist']);
 
-    grunt.registerTask('build',                     ['build:js', 'build:css', 'build:img']);
+    grunt.registerTask('build',         ['build:css', 'build:js', 'build:img']);
 
-    // Default task that happens during development
+    // Default task during development
     grunt.registerTask('default', ['build:css']);
 
 };
