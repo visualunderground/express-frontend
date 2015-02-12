@@ -29,10 +29,15 @@
         }
         
         var callback = function callback(){
-            var s = new application.method(document.querySelector('.css-selector'));
+            var s = new application.Sticky(document.querySelector('.sub-nav'));
+            var p = new application.Password(document.querySelector("#password"));
+
+            var m1 = new application.menuToggle(document.querySelector("#menu1p"));
+            var m2 = new application.menuToggle(document.querySelector("#menu2p"));
+            var m3 = new application.menuToggle(document.querySelector("#menu3p"));
         };
         
-        // loadJS( "javascripts/application.min.js", callback );
+        loadJS( "javascripts/application.min.js", callback );
     </script>
 </head>
 <body>
