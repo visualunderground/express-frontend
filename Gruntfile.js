@@ -122,7 +122,15 @@ module.exports = function(grunt) {
                 eqnull: true,
                 browser: true,
             },
-            all: ['Gruntfile.js', 'src/**/*.js', '!src/**/modernizr-custom.js', '!src/**/vendor/*.js']
+            all: [
+                'Gruntfile.js', 
+                'app/app.js',
+                'app/data/**/*.js', 
+                'app/routes/**/*.js', 
+                'src/**/*.js', 
+                '!src/**/modernizr-custom.js', 
+                '!src/**/vendor/*.js'
+            ]
         },
 
         imagemin: {

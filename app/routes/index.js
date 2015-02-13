@@ -2,7 +2,7 @@
 
 var express = require('express');
 var router = express.Router();
-var context = require('./../data/context.index')
+var context = require('./../data/context.index');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
