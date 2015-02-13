@@ -1,4 +1,5 @@
 var express = require('express');
+var compress = require('compression');
 var path = require('path');
 var favicon = require('serve-favicon');
 var routes = require('./routes/index');
@@ -6,6 +7,8 @@ var hbs = require('hbs');
 var app = express();
 var port = (process.env.PORT || '3000');
 
+// GZIP
+app.use(compress());
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
