@@ -18,6 +18,7 @@
     "grunt-contrib-uglify": "^0.7.0",
     "grunt-modernizr": "^0.6.0",
     "grunt-notify": "^0.4.1",
+    "grunt-perfbudget": "^0.1.6",
     "grunt-sass": "^0.17.0",
     "grunt-scss-lint": "^0.3.4",
     "time-grunt": "^1.0.0"

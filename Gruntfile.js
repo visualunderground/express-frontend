@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
     
     require('time-grunt')(grunt);
+    var wpt = require("./.wpt.js"); 
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -121,7 +122,7 @@ module.exports = function(grunt) {
                 eqnull: true,
                 browser: true,
             },
-            all: ['Gruntfile.js', 'src/**/*.js', '!src/**/modernizr-custom.js']
+            all: ['Gruntfile.js', 'src/**/*.js', '!src/**/modernizr-custom.js', '!src/**/vendor/*.js']
         },
 
         imagemin: {
@@ -152,6 +153,15 @@ module.exports = function(grunt) {
                 ]
                 
             }
+        },
+
+        perfbudget: {
+            default: {
+                options: {
+                    url: 'http://express-frontend.herokuapp.com/',
+                    key: wpt.key
+                }
+            }
         }
 
 
@@ -163,6 +173,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-modernizr');
+    grunt.loadNpmTasks('grunt-perfbudget');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-scss-lint');
     grunt.loadNpmTasks('grunt-notify');
