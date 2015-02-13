@@ -9,8 +9,9 @@ var port = (process.env.PORT || '3000');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-// partial directory
+// partial dirs
 hbs.registerPartials(__dirname + '/views/partials');
+hbs.registerPartials(__dirname + '/views/vendor');
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);

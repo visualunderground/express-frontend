@@ -43,10 +43,12 @@ module.exports = function(grunt) {
             },
             vendor: {
                 options: {
-                    preserveComments : true
+                    preserveComments : true,
+                    banner : "<script>",
+                    footer : "</script>" 
                 },
                 files: {
-                   'src/javascripts/vendor/loadJS.min.js': ['src/javascripts/vendor/loadJS.js']
+                   'app/views/vendor/loadJS.hbs': ['src/javascripts/vendor/loadJS.js']
                 }
             }
         },

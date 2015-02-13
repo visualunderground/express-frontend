@@ -1,5 +1,5 @@
 #!/bin/bash
-# "Automatic deploys from GitHub" are enabled in Heroku monitoring the 'deploy' branch.
+# "Automatic deploys from GitHub are enabled in Heroku monitoring the 'deploy' branch.
 
 yellow='\033[1;33m'
 nc='\033[0m' # No Color
