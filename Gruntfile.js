@@ -153,6 +153,15 @@ module.exports = function(grunt) {
                 ]
                 
             }
+        },
+
+        perfbudget: {
+            default: {
+                options: {
+                    url: 'http://express-frontend.herokuapp.com/',
+                    key: wpt.key
+                }
+            }
         }
 
 
@@ -164,6 +173,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-modernizr');
+    grunt.loadNpmTasks('grunt-perfbudget');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-scss-lint');
     grunt.loadNpmTasks('grunt-notify');
