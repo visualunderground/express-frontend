@@ -28,6 +28,7 @@ node_modules
 bower_components
 src/scss/vendor/
 src/javascripts/vendor/
+app/views/vendor/
 
 # Debug log from npm
 npm-debug.log
