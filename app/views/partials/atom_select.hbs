@@ -1,0 +1,20 @@
+{{#EL_SELECT}}<!-- 
+
+    !NO-WHITESPACE!
+
+    --><select 
+            class=
+                "form__control--select{{#if mod}}--{{mod}}{{/if}}
+            " 
+        >
+        {{#unless noNull}}
+            <option value="">Please select</option>
+        {{/unless}}
+        {{#options}}
+            <option value="{{value}}">{{text}}</option>
+        {{/options}}
+    </select><!-- 
+
+    !NO-WHITESPACE!
+
+-->{{/EL_SELECT}}

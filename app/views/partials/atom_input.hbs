@@ -1,0 +1,16 @@
+{{#EL_INPUT}}<!-- 
+
+    !NO-WHITESPACE!
+
+    -->{{#if prefix}}<b class="unit-prefix">{{prefix}}</b>{{/if}}<input 
+        class=
+            "form__control{{#if mod}}--{{mod}}{{/if}}
+            {{#if prefix}} has-prefix{{/if}}
+            {{#if suffix}} has-suffix{{/if}}" 
+        type="{{type}}" 
+        placeholder="{{placeholder}}" 
+    >{{#if suffix}}<b class="unit-suffix">{{suffix}}</b>{{/if}}{{#if delimiter}}<b class="form__control-delimiter">{{delimiter}}</b>{{/if}}<!-- 
+
+    !NO-WHITESPACE!
+
+-->{{/EL_INPUT}}

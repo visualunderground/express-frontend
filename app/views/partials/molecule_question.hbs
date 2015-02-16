@@ -1,0 +1,57 @@
+{{#EL_ROW}}
+<li class="form__group{{#if error}}--error{{/if}}">
+    
+    {{#if EL_TOUCH}}
+
+        <fieldset>
+            <legend class="form__question">
+                {{#EL_QUESTION}}
+                    {{{text}}}
+                    {{#if hint}}
+                        <i class="form__hint">{{{hint}}}</i>
+                    {{/if}}
+                {{/EL_QUESTION}}
+            </legend>
+            <div class="form__answer">
+                {{#EL_TOUCH}}
+                    {{#options}}
+                        <label for="{{name}}{{value}}" class="touch-control">
+                            <input id="{{name}}{{value}}" name="{{name}}" value="{{value}}" type="{{type}}"><span>{{text}}</span>
+                        </label>
+                    {{/options}}
+                {{/EL_TOUCH}}
+            </div>
+        </fieldset>
+
+
+    {{else}}
+
+        <label class="form__question">
+            {{#EL_QUESTION}}
+                {{{text}}}
+                {{#if hint}}
+                    <i class="form__hint">{{{hint}}}</i>
+                {{/if}}
+            {{/EL_QUESTION}}
+        </label>
+        <div class="form__answer">
+            
+            {{> atom_select}}
+            {{> atom_input}}
+            {{> atom_textarea}}
+            {{> atom_faux_input}}
+            {{> atom_button}}
+            
+            {{#if hint}}
+                <i class="form__hint">{{{hint}}}</i>
+            {{/if}}
+            
+            {{#if error}}
+                <div class="error-message">{{error}}</div>
+            {{/if}}
+
+        </div>
+
+    {{/if}}
+</li>
+{{/EL_ROW}}
