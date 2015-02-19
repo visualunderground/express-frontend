@@ -6,14 +6,14 @@ Payload.prototype.init = function init(options) {
     this.options = options || {};
     this.errorState = this.options.errorState || false;
     return this.getPayload();
-}
+};
 
 Payload.prototype.getErrorMessage = function getErrorMessage() {
     if (this.errorState === true){
         return "Oops. there was an error";
     } 
     return false;
-}
+};
 
 Payload.prototype.getPayload = function getPayload() {
   
@@ -198,10 +198,10 @@ Payload.prototype.getPayload = function getPayload() {
 
     return payload;
 
-}
+};
 
 // Proxy the class to hide all public methods
-var payloadProxy = new Payload;
+var payloadProxy = new Payload();
 
 // Only export required public methods
 module.exports = {
