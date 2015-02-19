@@ -1,4 +1,5 @@
 .content-main {
+    overflow: auto;
     width: $break-large - (2 * $gutter-page);;
     margin: 0 auto;
 
@@ -54,7 +55,7 @@ p + .form__content,
     width: 100%;
     clear: both;
     padding: 10px;
-    border-top: 1px solid $white-lilac;
+    border-top: 1px solid $border-colour;
 }
 
 // Errors

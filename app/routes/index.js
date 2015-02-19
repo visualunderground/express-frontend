@@ -6,7 +6,7 @@ var context = require('./../data/context.index');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', context.init({errorState: true}));
+  res.render('index', context.init({errorState: false}));
 });
 
 /* GET home page. */

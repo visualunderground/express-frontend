@@ -61,10 +61,12 @@ h1 {
 
 h2 {
     font-family: Raleway, Arial, Helvetica, sans-serif;
-    font-size: 42px;
+    font-size: 26px;
     line-height: 1.4;
     font-weight: 300;
-    margin: .5em 25px;
+    padding: .5em 25px;
+    margin-bottom: 25px;
+    background-color: #f7f7f7;
 
     small {
         font-size: 65%;

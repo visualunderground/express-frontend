@@ -2,11 +2,12 @@
 
 .sub-nav {
     width: 100%;
-    background-color: #fafafa;
+    background-color: $white;
     margin-bottom: -60px;
     position: relative;
     top: -90px;
-    border-bottom: 1px solid #e0e0e0;
+
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .05);
     
 
     &__content {
@@ -81,6 +82,8 @@
 
     .sticky.no-touch & {
         top: 0;
+
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
     }
 
     .sticky.touch & {
