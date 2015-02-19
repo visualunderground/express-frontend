@@ -4,8 +4,8 @@
 
     @include clearfix;
     background-color: $white;
-    border: 1px solid $pannel-border-colour;
-    border-radius: 6px;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
 }
 
 .global-header {
@@ -140,7 +140,6 @@ li[class^='message'] + .form__group,
 //	INPUTS	*/
 //*=====================================================================================================	*/
 %form__control {
-    border-radius: 2px;
     border: 1px solid $border-colour;
     background: $white;
     padding: 5px;
@@ -277,23 +276,20 @@ li[class^='message'] + .form__group,
 }
 
 .unit-prefix {
-    border-radius: 2px 0 0 2px;
+
 }
 
 .unit-suffix {
-    border-radius: 0 2px 2px 0;
     margin-right: 15px !important;
 }
 
 .has-prefix {
     width: 185px;
-    border-radius: 0 2px 2px 0;
     border-left: 0;
 }
 
 .has-suffix {
     width: 185px;
-    border-radius: 2px 0 0 2px;
     border-right: 0;
     margin-right: 0;
 }
