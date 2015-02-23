@@ -44,23 +44,23 @@ Payload.prototype.getPayload = function getPayload() {
             EL_ROW: [
                 {
                     error: this.getErrorMessage(),
-                    EL_QUESTION: {text: "Input"},
-                    EL_INPUT: {type: "text", placeholder: "[type='text']"}
+                    EL_QUESTION: {text: "Text input"},
+                    EL_INPUT: {type: "text"}
                 },
                 {
                     error: this.getErrorMessage(),
-                    EL_QUESTION: {text: "Input"},
-                    EL_INPUT: {type: "tel", placeholder: "[type='tel']"}
+                    EL_QUESTION: {text: "Telephone input"},
+                    EL_INPUT: {type: "tel"}
                 },
                 {
                     error: this.getErrorMessage(),
-                    EL_QUESTION: {text: "Input"},
-                    EL_INPUT: {type: "email", placeholder: "[type='email']"}
+                    EL_QUESTION: {text: "Email input"},
+                    EL_INPUT: {type: "email"}
                 },
                 {
                     error: this.getErrorMessage(),
-                    EL_QUESTION: {text: "Input"},
-                    EL_INPUT: {type: "password", placeholder: "[type='password']"}
+                    EL_QUESTION: {text: "Password input"},
+                    EL_INPUT: {type: "password"}
                 },
                 {
                     error: this.getErrorMessage(),
@@ -74,13 +74,13 @@ Payload.prototype.getPayload = function getPayload() {
                 },
                 {
                     error: this.getErrorMessage(),
-                    EL_QUESTION: {text: "Input (prefixed)", hint: "Additional information with <a href='#''>link</a>"},
-                    EL_INPUT: {type: "text", placeholder: "for example, 2.99", prefix: "£"}
+                    EL_QUESTION: {text: "Prefixed input", hint: "Additional information with <a href='#''>link</a>"},
+                    EL_INPUT: {type: "text", placeholder: "eg 2.99", prefix: "£"}
                 },
                 {
                     error: this.getErrorMessage(),
-                    EL_QUESTION: {text: "Input (suffixed)"},
-                    EL_INPUT: {type: "text", placeholder: "for example, 0.5", suffix: "mg"}
+                    EL_QUESTION: {text: "Suffixed input"},
+                    EL_INPUT: {type: "text", placeholder: "eg. 0.5", suffix: "mg"}
                 },
                 {
                     error: this.getErrorMessage(),
@@ -91,9 +91,9 @@ Payload.prototype.getPayload = function getPayload() {
                     error: this.getErrorMessage(),
                     EL_QUESTION: {text: "Delimited text input"},
                     EL_INPUT: [
-                        { mod: "xs", type: "text", placeholder: "yyyy", delimiter: "-"},
-                        { mod: "xs", type: "text", placeholder: "yyyy", delimiter: "-"},
-                        { mod: "xs", type: "text", placeholder: "yyyy"}
+                        { mod: "xs", type: "text", delimiter: "-"},
+                        { mod: "xs", type: "text", delimiter: "-"},
+                        { mod: "xs", type: "text"}
                     ]
                 },
                 {  
@@ -124,10 +124,10 @@ Payload.prototype.getPayload = function getPayload() {
                     EL_QUESTION: {text: "Radios"},
                     EL_TOUCH: {
                         options: [
-                            { name: "radio", value: "1", type: "radio", text: "Opt 1"},
-                            { name: "radio", value: "2", type: "radio", text: "Opt 2"},
-                            { name: "radio", value: "3", type: "radio", text: "Opt 3"},
-                            { name: "radio", value: "4", type: "radio", text: "Opt 4"}
+                            { name: "radio", value: "1", type: "radio", text: "option 1"},
+                            { name: "radio", value: "2", type: "radio", text: "option 2"},
+                            { name: "radio", value: "3", type: "radio", text: "option 3"},
+                            { name: "radio", value: "4", type: "radio", text: "option 4"}
                         ]
                     }
                 },
@@ -136,10 +136,9 @@ Payload.prototype.getPayload = function getPayload() {
                     EL_QUESTION: {text: "Checkboxes", hint: "Please select all that apply"},
                     EL_TOUCH: {
                         options: [
-                            { name: "checkbox", value: "1", type: "checkbox", text: "Opt 1"},
-                            { name: "checkbox", value: "2", type: "checkbox", text: "Opt 2"},
-                            { name: "checkbox", value: "3", type: "checkbox", text: "Opt 3"},
-                            { name: "checkbox", value: "4", type: "checkbox", text: "Opt 4"}
+                            { name: "checkbox", value: "1", type: "checkbox", text: "option 1"},
+                            { name: "checkbox", value: "2", type: "checkbox", text: "option 2"},
+                            { name: "checkbox", value: "3", type: "checkbox", text: "option 3"}
                         ]
                     }
                 },
@@ -170,10 +169,10 @@ Payload.prototype.getPayload = function getPayload() {
                     error: this.getErrorMessage(),
                     EL_QUESTION: {text: "Buttons"},
                     EL_BUTTON: [
-                        {text: "Button"},
-                        {text: "button--secondary", mod: "secondary"},
-                        {text: "button--tertiary", mod: "tertiary"},
-                        {text: "button--muted", mod: "muted"}
+                        {text: "Default"},
+                        {text: "Secondary", mod: "secondary"},
+                        {text: "Tertiary", mod: "tertiary"},
+                        {text: "Muted", mod: "muted"}
                     ]
                 },
                 {
