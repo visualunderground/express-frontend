@@ -5,12 +5,7 @@
 
         <fieldset>
             <legend class="form__question">
-                {{#EL_QUESTION}}
-                    {{{text}}}
-                    {{#if hint}}
-                        <i class="form__hint">{{{hint}}}</i>
-                    {{/if}}
-                {{/EL_QUESTION}}
+                {{> atom_question}}
             </legend>
             <div class="form__answer">
                 {{#EL_TOUCH}}
@@ -20,19 +15,17 @@
                         </label>
                     {{/options}}
                 {{/EL_TOUCH}}
+
+                {{#if error}}
+                    <div class="error-message">{{error}}</div>
+                {{/if}}
             </div>
         </fieldset>
-
 
     {{else}}
 
         <label class="form__question">
-            {{#EL_QUESTION}}
-                {{{text}}}
-                {{#if hint}}
-                    <i class="form__hint">{{{hint}}}</i>
-                {{/if}}
-            {{/EL_QUESTION}}
+            {{> atom_question}}
         </label>
         <div class="form__answer">
             
