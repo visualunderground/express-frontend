@@ -55,28 +55,7 @@
     </div> -->
     
     <div class="content-main" role="main">
-        <h2>Page name</h2>
-       
-        {{>atom_message CONTEXT_MESSAGES}}
-        
-        <div>
-            
-            {{> atom_block_link CONTEXT_BLOCK_LINKS}}
-
-            <div class="feature-ticker">
-                <ul class="feature-ticker__list">
-                    <li class="feature-ticker__item">Handled with care</li>
-                    <li class="feature-ticker__item">Free and fast delivery</li>
-                    <li class="feature-ticker__item">Extra warranty</li>
-                    <li class="feature-ticker__item">Secure Shopping</li>
-                    <li class="feature-ticker__item">It's easy</li>
-                </ul>
-                <a href="#" class="feature-ticker__link">more info</a>
-            </div>
-
-
-        </div>
-
+        <h2>Sample page</h2>
         <fieldset class="form">
             <legend class="form__title" id="text-entry">Text entry</legend>
             <p>Bacon ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pharetra pellentesque Justo quis sodales. Suspendisse dolor magna a fringilla augue. Ut feugiat turpis a faselli.</p>
@@ -84,6 +63,13 @@
                 {{>molecule_question CONTEXT_FORM}}
             </ul>
         </fieldset>
+
+        {{>atom_message CONTEXT_MESSAGES}}
+        
+        <div>
+            {{> atom_block_link CONTEXT_BLOCK_LINKS}}
+        </div>
+
         <nav>
             {{> atom_button CONTEXT_NAV }}
         </nav>

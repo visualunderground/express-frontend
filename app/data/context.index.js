@@ -171,7 +171,6 @@ Payload.prototype.getPayload = function getPayload() {
                     EL_BUTTON: [
                         {text: "Default"},
                         {text: "Secondary", mod: "secondary"},
-                        {text: "Tertiary", mod: "tertiary"},
                         {text: "Muted", mod: "muted"}
                     ]
                 },

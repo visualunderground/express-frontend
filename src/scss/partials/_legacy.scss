@@ -5,14 +5,8 @@
 
     @include clearfix;
     background-color: $white;
-    border-radius: 2px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
-}
-
-.global-header {
-    @include clearfix;
-    background-color: $header-colour;
-    margin-bottom: 90px;
+    border-radius: 5px;
 }
 
 .global-footer {
@@ -90,7 +84,7 @@ p + .form__content,
     //	SUB TEXT
     display: block;
     clear: both;
-    font-size: 14px;
+    //font-size: 14px;
     line-height: 1.3;
     padding-bottom: 4px; 
     font-style: normal;
@@ -117,7 +111,7 @@ p + .form__content,
     color: inherit;
     font-size: inherit;
     font-family: inherit;
-    border-radius: 3px;
+    border-radius: 4px;
     //line-height: inherit;	don't do as buttons and inputs react differently
     line-height: 1;
     //	FF: LIN-HEIGHT BUG 
@@ -243,14 +237,14 @@ p + .form__content,
 }
 
 .unit-prefix {
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 
 }
 
 .unit-suffix {
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
     margin-right: 15px !important;
 }
 
@@ -273,7 +267,6 @@ p + .form__content,
 // MQs
 // ----------------------------------------
 @include respond-to(wide-screens) { 
-    .global-header h1,
     .content-main {
         width: auto;
         margin-left: $gutter-page;

@@ -170,11 +170,29 @@ module.exports = function(grunt) {
                     key: wpt.key
                 }
             }
+        },
+
+        autoprefixer: {
+            options: {
+                // Task-specific options go here.
+                cascade: false,
+            },
+
+            dist: {
+                options: {
+                    // Target-specific options go here.
+                    // diff: true
+                },
+                src: 'app/public/stylesheets/app.css',
+                dest: 'app/public/stylesheets/app.css'
+            }
+            
         }
 
 
     });
     
+    grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
@@ -190,7 +208,7 @@ module.exports = function(grunt) {
     grunt.registerTask('get:vendor',    ['copy:vendor', 'uglify:vendor']);
 
     // Build assets from src
-    grunt.registerTask('build:css',     ['scsslint:dist', 'sass:dist']);
+    grunt.registerTask('build:css',     ['scsslint:dist', 'sass:dist', 'autoprefixer:dist']);
     grunt.registerTask('build:js',      ['jshint:all', 'modernizr', 'concat:dist', 'uglify:dist']);
     grunt.registerTask('build:img',     ['imagemin:dist']);
 

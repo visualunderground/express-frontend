@@ -1,10 +1,32 @@
-@mixin button-colour($colour) {
-    background: $colour;
+// @mixin button-colour($colour) {
+//     background: $colour;
 
-    // border-width: 1px;
-    // border-style: solid;
-    border-radius: 3px;
-    // border-color: darken($colour, 15%);
+//     border-width: 1px;
+//     border-style: solid;
+//     border-radius: 4px;
+//     border-color: darken($colour, 15%);
+    
+//     @if lightness($colour) > 75% {
+//         color: $text-colour;
+//     }@else {
+//         color: $white;
+//     }
+
+//     &:hover,
+//     &:active,
+//     &:focus {
+//         background: darken($colour, 5%);
+//     }
+// }
+
+@mixin button-style($colour) {
+    background: $colour;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: darken($colour, 17%);
+    background-color: $colour;
+    background-image: linear-gradient(lighten($colour, 3%), darken($colour, 5%));
     
     @if lightness($colour) > 75% {
         color: $text-colour;
@@ -19,16 +41,54 @@
     }
 }
 
-%button {
+// %button {
+//     font-family: inherit;
+//     font-size: 16px;
+//     font-weight: 500;
+//     line-height: 1;
+//     margin-right: 15px;
+//     min-height: 39px;
+//     // =  line-height + border + padding
+//     border: 0;
+//     padding: 5px;
+    
+//     cursor: pointer;
+//     min-width: 125px;
+
+//     &:active {
+//         position: relative;
+//         top: 1px;
+//     }
+
+//     @include respond-to(handhelds) {
+//         width: 100%;
+//     }
+// }
+
+.button {
+    @extend %button-form;
+    @include button-style($selected-colour);
+}
+
+.button--secondary {
+    @extend %button-form;
+    //0e557a//@include button-style(#1e89d1);  
+    @include button-style(#18648d);  
+}
+
+.button--muted {
+    @extend %button-form;
+    @include button-style($muted-colour);
+}
+
+%button-form {
     font-family: inherit;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
-    text-transform: uppercase;
     line-height: 1;
     margin-right: 15px;
-    min-height: 39px;
+    min-height: 37px;
     // =  line-height + border + padding
-    border: 0;
     padding: 5px;
     
     cursor: pointer;
@@ -43,25 +103,3 @@
         width: 100%;
     }
 }
-
-.button {
-    @extend %button;
-    @include button-colour($primary-colour);
-}
-
-.button--secondary {
-    @extend %button;
-    @include button-colour($secondary-colour);
-}
-
-.button--tertiary {
-    @extend %button;
-    @include button-colour($selected-colour);
-    
-}
-
-.button--muted {
-    @extend %button;
-    @include button-colour($muted-colour);
-}
-

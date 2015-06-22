@@ -5,6 +5,7 @@
     font-weight: 400;
     margin: 1em 0;
     width: 100%;
+    color: $brand-text;
 
     @include respond-to(handhelds) { 
         background-color: $header-colour;
@@ -41,8 +42,7 @@
     }
 
     span {
-        border: 1px solid $border-colour;
-        border-radius: 3px;
+        @include button-style($muted-colour);
 
         padding: 9px 30px 10px;
         float: right;
@@ -62,8 +62,7 @@
     }
 
     input:checked + span {  // IE 9+ :-?
-        background-color: $selected-colour;
-        border-color: darken($selected-colour, 15%);
+        @include button-style($selected-colour);
         color: $white;
 
         .form__hint {

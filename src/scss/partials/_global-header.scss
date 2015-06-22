@@ -1,0 +1,23 @@
+.global-header {
+    @include clearfix;
+    // background-color: $header-colour;
+    background: linear-gradient(to bottom, #1c6c96 0%, #003c5b 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-color: #00334e;
+    margin-bottom: 90px;
+}
+
+@include respond-to(wide-screens) { 
+    .global-header h1 {
+        width: auto;
+        margin-left: $gutter-page;
+        margin-right: $gutter-page;
+    }
+}
+
+@include respond-to(handhelds) {
+
+    .global-header h1 {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
