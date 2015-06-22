@@ -157,6 +157,11 @@ module.exports = function(grunt) {
                     {
                         src: 'bower_components/loadJS/loadJS.js',
                         dest: 'src/javascripts/vendor/loadJS.js'
+                    },
+                    {
+                        // TODO: mv to 'src' and incorporate in build pipeline
+                        src: 'bower_components/waypoints/lib/noframework.waypoints.min.js',
+                        dest: 'app/public/javascripts/vendor/noframework.waypoints.min.js'
                     }
                 ]
                 

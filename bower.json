@@ -8,6 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "meyer-reset": "*",
-    "loadJS": "https://github.com/filamentgroup/loadJS.git#0.2"
+    "loadJS": "https://github.com/filamentgroup/loadJS.git#0.2",
+    "waypoints": "~3.1.1"
   }
 }

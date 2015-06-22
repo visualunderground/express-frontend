@@ -14,4 +14,9 @@ router.get('/test-route', function(req, res, next) {
   res.render('test-route', { title: 'Test: routes.js' });
 });
 
+/* GET home page. */
+router.get('/waypoints', function(req, res, next) {
+  res.render('waypoints', { title: 'Test: Waypoints' });
+});
+
 module.exports = router;
